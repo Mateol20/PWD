@@ -2,8 +2,7 @@
 function verNumero($numero)
 {
     $valor = "";
-    if (is_numeric($numero)) { // Verificar si es un número
-
+    if (is_numeric($numero)) {
         if ($numero > 0) {
             $valor = "El número es positivo.";
         } elseif ($numero < 0) {
@@ -16,15 +15,15 @@ function verNumero($numero)
     }
     return $valor;
 }
-
-// Llamar a la función con isset
 $salida = "";
 if (isset($_GET['numero'])) {
     $numero = $_GET['numero'];
     $salida = verNumero($numero);
-    echo "<h1>Resultado:</h1>";
-    echo "<p>$salida</p>";
-    echo '<a href="numero.html">Volver</a>';
+
+    // Redirecciona a la vista, pasando el mensaje por la URL
+    header("Location: ../../vista/TP1/resultado.php?salida=" . urlencode($salida));
+    exit();
 } else {
-    echo "Por favor, ingrese un número";
+    header("Location: ../../vista/TP1/EJ_1.html");
+    exit();
 }
