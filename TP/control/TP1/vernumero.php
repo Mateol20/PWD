@@ -1,10 +1,11 @@
 <?php
-function verNumero($numero) {
-    $valor="";
+function verNumero($numero)
+{
+    $valor = "";
     if (is_numeric($numero)) { // Verificar si es un número
-        
+
         if ($numero > 0) {
-        $valor = "El número es positivo.";
+            $valor = "El número es positivo.";
         } elseif ($numero < 0) {
             $valor = "El número es negativo.";
         } else {
@@ -24,7 +25,6 @@ if (isset($_GET['numero'])) {
     echo "<h1>Resultado:</h1>";
     echo "<p>$salida</p>";
     echo '<a href="numero.html">Volver</a>';
-    
-}else {
+} else {
     echo "Por favor, ingrese un número";
 }
