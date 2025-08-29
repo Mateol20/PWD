@@ -21,7 +21,7 @@ if (isset($_GET['numero'])) {
     $salida = verNumero($numero);
 
     // Redirecciona a la vista, pasando el mensaje por la URL
-    header("Location: ../../vista/TP1/resultado.php?salida=" . urlencode($salida));
+    header("Location: ../../vista/TP1/resultado_ej1.php?salida=" . urlencode($salida));
     exit();
 } else {
     header("Location: ../../vista/TP1/EJ_1.html");
