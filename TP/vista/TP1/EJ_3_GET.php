@@ -19,7 +19,7 @@ Cambiar el método Post por Get y analizar las diferencias  -->
     $direccion = $_POST['direccion'];
     echo "Hola, yo soy $nombre, $apellido tengo $edad años y vivo en $direccion.". "Estos datos se recibieron por POST";
     ?>
-    <form action="EJ_3.php" method="get">
+    <form action="EJ_3_POST.php" method="get">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <label for="apellido">Apellido:</label>

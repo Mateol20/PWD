@@ -23,7 +23,7 @@ $minutosRestantes = $totalMinutos % 60;
 
 if(isset($totalHoras)){
 
-    header("Location: ../../vista/TP1/resultado_ej2.php?totalHoras=" . urlencode($totalHoras). "&minutosRestantes=" . urlencode($minutosRestantes));
+    header("Location: ../../vista/TP1/vista_EJ2.php?totalHoras=" . urlencode($totalHoras). "&minutosRestantes=" . urlencode($minutosRestantes));
 }
 else{
     header("Location: ../..control/contador_hora.php");
