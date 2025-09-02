@@ -6,34 +6,36 @@ complete un array unidimensional. Visualizar por pantalla la cantidad total de h
 se cursan por semana.  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ejercicio 2</title>
 </head>
+
 <body>
-<?php
-echo '<form action="../../control/TP1/contador_hora_EJ2.php" method="get">';
-echo '<h3>Horas cursadas por día</h3>';
-echo '<label for="lunes">Lunes:</label>';
-echo '<input type="number" id="lunes_horas" name="lunes_horas" min="0" value="0"> horas';
-echo '<input type="number" id="lunes_minutos" name="lunes_minutos" min="0" max="59" value="0"> minutos<br><br>';
-echo '<label for="martes">Martes:</label>';
-echo '<input type="number" id="martes_horas" name="martes_horas" min="0" value="0"> horas';
-echo '<input type="number" id="martes_minutos" name="martes_minutos" min="0" max="59" value="0"> minutos<br><br>';
-echo '<label for="miercoles">Miércoles:</label>';
-echo '<input type="number" id="miercoles_horas" name="miercoles_horas" min="0" value="0"> horas';
-echo '<input type="number" id="miercoles_minutos" name="miercoles_minutos" min="0" max="59" value="0"> minutos<br><br>';
-echo '<label for="jueves">Jueves:</label>';
-echo '<input type="number" id="jueves_horas" name="jueves_horas" min="0" value="0"> horas';
-echo '<input type="number" id="jueves_minutos" name="jueves_minutos" min="0" max="59" value="0"> minutos<br><br>';
-echo '<label for="viernes">Viernes:</label>';
-echo '<input type="number" id="viernes_horas" name="viernes_horas" min="0" value="0"> horas';
-echo '<input type="number" id="viernes_minutos" name="viernes_minutos" min="0" max="59" value="0"> minutos<br><br>';
-echo '<button type="submit">Enviar</button>';
-echo '</form>';
-?>
+    <?php
+    echo '<form action="../../control/TP1/contador_hora_EJ2.php" method="get">';
+    echo '<h3>Horas cursadas por día</h3>';
+    echo '<label for="lunes">Lunes:</label>';
+    echo '<input type="number" id="lunes_horas" name="lunes_horas" min="0" value="0"> horas';
+    echo '<input type="number" id="lunes_minutos" name="lunes_minutos" min="0" max="59" value="0"> minutos<br><br>';
+    echo '<label for="martes">Martes:</label>';
+    echo '<input type="number" id="martes_horas" name="martes_horas" min="0" value="0"> horas';
+    echo '<input type="number" id="martes_minutos" name="martes_minutos" min="0" max="59" value="0"> minutos<br><br>';
+    echo '<label for="miercoles">Miércoles:</label>';
+    echo '<input type="number" id="miercoles_horas" name="miercoles_horas" min="0" value="0"> horas';
+    echo '<input type="number" id="miercoles_minutos" name="miercoles_minutos" min="0" max="59" value="0"> minutos<br><br>';
+    echo '<label for="jueves">Jueves:</label>';
+    echo '<input type="number" id="jueves_horas" name="jueves_horas" min="0" value="0"> horas';
+    echo '<input type="number" id="jueves_minutos" name="jueves_minutos" min="0" max="59" value="0"> minutos<br><br>';
+    echo '<label for="viernes">Viernes:</label>';
+    echo '<input type="number" id="viernes_horas" name="viernes_horas" min="0" value="0"> horas';
+    echo '<input type="number" id="viernes_minutos" name="viernes_minutos" min="0" max="59" value="0"> minutos<br><br>';
+    echo '<button type="submit">Enviar</button><br><br>';
+    echo '<a href="../../index.html">Volver al Inicio</a>';
+    echo '</form>';
+    ?>
 </body>
 
 </html>

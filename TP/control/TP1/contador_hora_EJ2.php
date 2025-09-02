@@ -10,7 +10,7 @@ $totalMinutos = 0;
 $dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
 foreach ($dias as $dia) {
     if (isset($_GET[$dia . '_horas'])) // $dia traeria el nombre del dia y lo conctena con _horas que es el id del input
-        {
+    {
         $horas = (int)$_GET[$dia . '_horas'];
         $minutos = (int)$_GET[$dia . '_minutos'];
         $totalMinutos += ($horas * 60) + $minutos;
@@ -21,12 +21,9 @@ $minutosRestantes = $totalMinutos % 60;
 
 
 
-if(isset($totalHoras)){
+if (isset($totalHoras)) {
 
-    header("Location: ../../vista/TP1/vista_EJ2.php?totalHoras=" . urlencode($totalHoras). "&minutosRestantes=" . urlencode($minutosRestantes));
-}
-else{
+    header("Location: ../../vista/TP1/vista_EJ2.php?totalHoras=" . urlencode($totalHoras) . "&minutosRestantes=" . urlencode($minutosRestantes));
+} else {
     header("Location: ../..control/contador_hora.php");
 }
-
-?>

@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Estilos de los campos de texto y select */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+fieldset label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+fieldset input {
+  margin-right: 0.5rem;
+}
+
+/* Estilos de los fieldsets */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+legend {
+  font-weight: bold;
+  color: #555;
+  padding: 0 0.5rem;
+}
+
+/* Estilo del botón */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
