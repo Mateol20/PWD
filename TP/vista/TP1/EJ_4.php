@@ -29,6 +29,7 @@
 
     echo "<br/>";
     echo "<button type='submit'> ENVIAR </button>";
+    echo "<a href='../../index.html'>Volver al Inicio</a>";
     echo "</form>";
     ?>
 

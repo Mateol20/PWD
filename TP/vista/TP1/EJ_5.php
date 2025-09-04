@@ -49,6 +49,7 @@ un mensaje que indique el tipo de estudios que posee y su sexo. -->
   echo '    </select>';
   echo '  </fieldset>';
   echo '  <input type="submit" value="Enviar" />';
+  echo "<a href='../../index.html'>Volver al Inicio</a>";
   echo '</form>';
   ?>
 </body>

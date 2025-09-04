@@ -75,6 +75,7 @@
     echo "        </label><br>";
     echo "    </fieldset>";
     echo "    <input type='submit' value='Enviar' />";
+    echo "<a href='../../index.html'>Volver al Inicio</a>";
     echo "</form>";
     ?>
 </body>

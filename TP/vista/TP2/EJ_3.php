@@ -1,20 +1,22 @@
+<!-- En este ejercicio validamos con JSquery -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 3 TP2</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/style3.css" />
-  </head>
-  <body>
-    <?php
-    echo <<<HTML
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 3 TP2</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/style3.css" />
+</head>
+
+<body>
+  <?php
+  echo <<<HTML
     <div class="login-card">
       <span class="close-btn">&times;</span>
       <h2>Login</h2>
@@ -22,7 +24,7 @@
         id="formulario"
         class="form g3"
         method="post"
-        action=""
+        action="../../control/TP2/control_EJ3.php"
         novalidate
       >
         <div class="mb-3">
@@ -50,6 +52,7 @@
         </div>
 
         <button type="submit" class="btn btn-custom-green">Login</button>
+        <a href="../../index.html">Volver al Inicio</a>
       </form>
     </div>
 
@@ -58,9 +61,11 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <!-- Validaciones con JSquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="../../control/TP1/TP2/validacion.js"></script>
   </body>
   HTML;
   ?>
+
 </html>

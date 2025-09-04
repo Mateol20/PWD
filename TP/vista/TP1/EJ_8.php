@@ -4,15 +4,17 @@ un  botón  enviar  los  datos  a  un  script  encargado  de  realizar  el  cál
 Agregar un botón para limpiar el formulario y volver a consultar -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style3.css">
-    <title>Cine Cinem</title>
-  </head>
-  <body>
-    <?php
-    echo <<<HTML
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style3.css">
+  <title>Cine Cinem</title>
+</head>
+
+<body>
+  <?php
+  echo <<<HTML
     <form
       action="../../control/TP1/cine_EJ8.php"
       method="post"
@@ -28,8 +30,10 @@ Agregar un botón para limpiar el formulario y volver a consultar -->
       <br />
       <button type="submit">Enviar</button>
       <button type="reset">Limpiar</button>
+      <a href='../../index.html'>Volver al Inicio</a>
     HTML;
-    ?>
-    </form>
-  </body>
+  ?>
+  </form>
+</body>
+
 </html>

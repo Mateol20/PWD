@@ -36,6 +36,7 @@ Cambiar el método Post por Get y analizar las diferencias  -->
         <label for="direccion">Direccion:</label>
         <input type="text" id="direccion" name="direccion" required>
         <input type="submit" value="Enviar">
+        <a href="../../index.html">Volver al Inicio</a>
     </form>
 HTML;
     ?>

@@ -1,0 +1,16 @@
+#botonEnviar,
+#botonBorrar {
+  border-radius: 9px;
+}
+#botonEnviar {
+  background-color: rgb(162, 162, 255);
+}
+
+label {
+  font-size: small;
+  font-weight: 700;
+}
+body {
+  background-color: blanchedalmond;
+  margin: 5px;
+}
