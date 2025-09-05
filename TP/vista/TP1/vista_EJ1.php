@@ -11,15 +11,10 @@
     <h1>Resultado:</h1>
     <p>
         <?php
-        // Obtiene el mensaje del parámetro de la URL
-        if (isset($_GET['salida'])) {
-            echo htmlspecialchars($_GET['salida']);
-        } else {
-            echo "No se ha recibido un resultado.";
-        }
+        echo $valor;
+
         ?>
-    </p>
-    <a href="EJ_1.html">Volver</a>
+        <a href='../../vista/TP1/EJ_1.php'>Volver al formulario</a>;
 </body>
 
 </html>

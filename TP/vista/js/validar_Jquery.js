@@ -34,13 +34,10 @@ $(function () {
       error = true;
     } else {
       let passwordError = "";
-      if (password.length < 8) {
-        passwordError = "La contraseña debe tener como mínimo 8 caracteres.";
-      } else if (password === usuario) {
+
+      if (password === usuario) {
         passwordError =
           "La contraseña no puede ser igual que el nombre de usuario.";
-      } else if (!/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-        passwordError = "La contraseña debe contener letras y números.";
       }
 
       if (passwordError !== "") {

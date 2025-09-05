@@ -8,6 +8,7 @@
 
 <body>
     <?php
+    // En este ejercicio no usamos el encapsulamiento, ya que el $_FILES es global cuando se suben archivos.
     if (isset($_FILES['archivo'])) {
         $archivo = $_FILES['archivo'];
         $directorio_destino = '../../util/TP3';

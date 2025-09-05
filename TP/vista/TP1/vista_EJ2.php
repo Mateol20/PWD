@@ -11,10 +11,11 @@
     <?php
     // Mostrar el total de horas
     echo "<h2>Resumen de Horas Cursadas</h2>";
-    echo "Total de horas cursadas por semana: " . $_GET['totalHoras'] . " horas y " . $_GET['minutosRestantes'] . " minutos.";
+    echo "Total de horas cursadas por semana: " . $totalHoras . " horas y " . $minutosRestantes . " minutos.";
     echo "<br>";
-    echo '<a href="EJ_2.php">Volver</a>';
+
     ?>
+    <a href='../../vista/TP1/EJ_2.php'>Volver al formulario</a>
 </body>
 
 </html>

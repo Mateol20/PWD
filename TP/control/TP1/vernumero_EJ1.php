@@ -1,29 +1,18 @@
 <?php
-function verNumero($numero)
-{
-    $valor = "";
-    if (is_numeric($numero)) {
-        if ($numero > 0) {
-            $valor = "El número es positivo.";
-        } elseif ($numero < 0) {
-            $valor = "El número es negativo.";
-        } else {
-            $valor = "El número es cero.";
-        }
-    } else {
-        $valor = "No es un número válido.";
-    }
-    return $valor;
-}
-$salida = "";
-if (isset($_GET['numero'])) {
-    $numero = $_GET['numero'];
-    $salida = verNumero($numero);
+include '../encapsular.php';
+$numero = obtenerDato('numero');
 
-    // Redirecciona a la vista, pasando el mensaje por la URL
-    header("Location: ../../vista/TP1/vista_EJ1.php?salida=" . urlencode($salida));
-    exit();
+
+$valor = "";
+if (is_numeric($numero)) {
+    if ($numero > 0) {
+        $valor = "El número es positivo.";
+    } elseif ($numero < 0) {
+        $valor = "El número es negativo.";
+    } else {
+        $valor = "El número es cero.";
+    }
 } else {
-    header("Location: ../../vista/TP1/EJ_1.html");
-    exit();
+    $valor = "No es un número válido.";
 }
+include '../../vista/TP1/vista_EJ1.php';

@@ -8,6 +8,8 @@ Agregar un botón para limpiar el formulario y volver a consultar -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style_header.css" />
+  <link rel="stylesheet" href="../css/style_footer.css" />
   <link rel="stylesheet" href="../css/style3.css">
   <title>Cine Cinem</title>
 </head>
@@ -30,10 +32,10 @@ Agregar un botón para limpiar el formulario y volver a consultar -->
       <br />
       <button type="submit">Enviar</button>
       <button type="reset">Limpiar</button>
-      <a href='../../index.html'>Volver al Inicio</a>
     HTML;
   ?>
   </form>
+  <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

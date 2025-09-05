@@ -18,32 +18,42 @@ cargado, en caso contrario mostrar un mensaje indicando el problema.  -->
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN778F-5oA"
       crossorigin="anonymous"
     ></script>
+
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
     <title>EJERCICIO 1 TP3</title>
   </head>
   <body>
-    <div class="container mt-5">
-      <form
-        class="form-g3"
-        id="form"
-        method="POST"
-        action="../../control/TP3/control_EJ1.php"
-        enctype="multipart/form-data"
-        novalidate
-      >
-        <div class="mb-3">
-          <label for="archivo" class="form-label"
-            >Subir un archivo .doc o pdf</label
-          >
-          <input type="file" class="form-control" id="archivo" name="archivo" />
-          <div class="invalid-feedback" id="invalid_file"></div>
-        </div>
-        <button type="submit" class="btn btn-primary">Subir archivo</button>
-        <br>
-        <a href="../../index.html">Volver al Inicio</a>
-      </form>
-    </div>
-     
+    <main class="main-content">
+      <div class="container mt-5">
+        <form
+          class="form-g3"
+          id="form"
+          method="POST"
+          action="../../control/TP3/control_EJ1.php"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="archivo" class="form-label"
+              >Subir un archivo .doc o pdf</label
+            >
+            <input
+              type="file"
+              class="form-control"
+              id="archivo"
+              name="archivo"
+            />
+            <div class="invalid-feedback" id="invalid_file"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Subir archivo</button>
+          <br />
+          <a href="../../index.html">Volver al Inicio</a>
+        </form>
+      </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="../../control/TP3/validar_EJ1.js""></script>
+    <script src="../js/validar_EJ1.js"></script>
+    <script src="../js/cargarFyH.js"></script>
   </body>
 </html>

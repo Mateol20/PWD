@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(64, 75, 107);
+  margin: 5px;
+}
 #botonEnviar,
 #botonBorrar {
   border-radius: 9px;
@@ -9,8 +13,4 @@
 label {
   font-size: small;
   font-weight: 700;
-}
-body {
-  background-color: blanchedalmond;
-  margin: 5px;
 }

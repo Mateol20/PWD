@@ -10,11 +10,15 @@ se cursan por semana.  -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
     <title>Ejercicio 2</title>
 </head>
 
 <body>
+
     <?php
+    echo "<main>";
     echo '<form action="../../control/TP1/contador_hora_EJ2.php" method="get">';
     echo '<h3>Horas cursadas por día</h3>';
     echo '<label for="lunes">Lunes:</label>';
@@ -33,9 +37,10 @@ se cursan por semana.  -->
     echo '<input type="number" id="viernes_horas" name="viernes_horas" min="0" value="0"> horas';
     echo '<input type="number" id="viernes_minutos" name="viernes_minutos" min="0" max="59" value="0"> minutos<br><br>';
     echo '<button type="submit">Enviar</button><br><br>';
-    echo '<a href="../../index.html">Volver al Inicio</a>';
     echo '</form>';
+    echo "</main>";
     ?>
+    <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

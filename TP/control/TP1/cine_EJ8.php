@@ -6,21 +6,18 @@
 // es estudiante o menor de 12 años el precio es de $160, si es estudiante y mayor o igual 
 // de 12 años el precio es de $180, en cualquier otro caso el precio es de $300.
 
-if (isset($_POST['edad']) && isset($_POST['estudiante'])) {
-    
-    $mensaje = "";
-    $edad = intval($_POST['edad']);
-    $es_estudiante = $_POST['estudiante'];
-    if ($es_estudiante === 'si' && $edad >= 12) {
-        $precio = 180;
-    } elseif ($edad < 12 || $es_estudiante === 'si') {
-        $precio = 160;
-    } else {
-        $precio = 300;
-    }
 
-    $mensaje="El precio de la entrada es: $" . $precio;
-    include '../../vista/TP1/vista_EJ8.php';
+include_once '../encapsular.php';
+$mensaje = "";
+$edad = intval(obtenerDato('edad'));
+$es_estudiante = obtenerDato('estudiante');
+if ($es_estudiante === 'si' && $edad >= 12) {
+    $precio = 180;
+} elseif ($edad < 12 || $es_estudiante === 'si') {
+    $precio = 160;
 } else {
-    $mensaje= "Por favor, envíe los datos a través del formulario.";
+    $precio = 300;
 }
+
+$mensaje = "El precio de la entrada es: $" . $precio;
+include '../../vista/TP1/vista_EJ8.php';

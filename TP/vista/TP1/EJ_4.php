@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
     <link rel="stylesheet" href="../css/style2.css">
     <title>Ejercicio 4</title>
 </head>
@@ -11,6 +13,7 @@
 <body>
 
     <?php
+    echo "<main>";
     echo "<form method='get' action='../../control/TP1/calcular_edad_EJ4.php'>";
     echo "<label for='nombre'>Nombre </label>";
     echo "<input type=text name='nombre' id='nombre'/>";
@@ -29,10 +32,10 @@
 
     echo "<br/>";
     echo "<button type='submit'> ENVIAR </button>";
-    echo "<a href='../../index.html'>Volver al Inicio</a>";
     echo "</form>";
+    echo "</main>";
     ?>
-
+    <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

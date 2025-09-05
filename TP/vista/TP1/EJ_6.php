@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 6</title>
+
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
     <link rel="stylesheet" href="../css/style3.css">
 </head>
 
 <body>
     <?php
+    echo "<main class='main-content'>";
     echo "<form method='POST' action='../../control/TP1/control_EJ6.php'>";
 
     echo "    <div class='form-group'>";
@@ -77,7 +81,9 @@
     echo "    <input type='submit' value='Enviar' />";
     echo "<a href='../../index.html'>Volver al Inicio</a>";
     echo "</form>";
+    echo "</main>";
     ?>
+    <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
     <link rel="stylesheet" href="../css/style_calculadora.css" />
     <title>Ejercicio 7</title>
 </head>
@@ -28,11 +31,10 @@
     echo "<br/>";
 
     echo "<button type='submit'> ENVIAR </button>";
-    echo "<a href='../../index.html'>Volver al Inicio</a>";
     echo "</form>";
 
     ?>
-
+    <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

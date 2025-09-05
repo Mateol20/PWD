@@ -10,12 +10,16 @@ un mensaje que indique el tipo de estudios que posee y su sexo. -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../css/style_header.css" />
+  <link rel="stylesheet" href="../css/style_footer.css" />
   <link rel="stylesheet" href="../css/style2.css" />
   <title>Ejercicio 5</title>
 </head>
 
 <body>
   <?php
+  echo "<main class='main-content'>";
   echo '<form action="../../control/TP1/control_EJ5.php" method="post">';
   echo '  <h1>Formulario de Registro</h1>';
   echo '  <label for="nombre">Nombre:</label>';
@@ -49,9 +53,10 @@ un mensaje que indique el tipo de estudios que posee y su sexo. -->
   echo '    </select>';
   echo '  </fieldset>';
   echo '  <input type="submit" value="Enviar" />';
-  echo "<a href='../../index.html'>Volver al Inicio</a>";
   echo '</form>';
+  echo "</main>";
   ?>
+  <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

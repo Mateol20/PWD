@@ -31,32 +31,9 @@
 
 <body>
     <?php
-    $titulo = $_POST['titulo'];
-    $director = $_POST['director'];
-    $actores = $_POST['actores'];
-    $guion = $_POST['guion'];
-    $produccion = $_POST['produccion'];
-    $anio = $_POST['anio'];
-    $nacionalidad = $_POST['nacionalidad'];
-    $genero = $_POST['genero'];
-    $duracion = $_POST['duracion'];
-    $restriccionDeEdad = $_POST['rest_edad'];
-
-    echo "<div id=salida>";
-    echo "<label for=tituloPag id='tituloPag'>La pelicula introducida es</label>" . "<br/>" . "<br/>";
-    echo "<label for='titulo'>Título:</label> " . $titulo . "<br/>";
-    echo "<label for='director'>Director:</label> " . $director . "<br/>";
-    echo "<label for='actores'>Actores:</label> " . $actores . "<br/>";
-    echo "<label for='guion'>Guion:</label> " . $guion . "<br/>";
-    echo "<label for='produccion'>Producción:</label> " . $produccion . "<br/>";
-    echo "<label for='anio'>Año:</label> " . $anio . "<br/>";
-    echo "<label for='nacionalidad'>Nacionalidad:</label> " . $nacionalidad . "<br/>";
-    echo "<label for='genero'>Género:</label> " . $genero . "<br/>";
-    echo "<label for='duracion'>Duración:</label> " . $duracion . "<br/>";
-    echo "<label for='restriccionDeEdad'>Restricción de edad:</label> " . $restriccionDeEdad . "<br/>";
-    echo "<a href='../../vista/TP2/EJ_4.php'>Volver al formulario</a>";
-    echo "</div>"
-
+    echo "<div id='salida'>";
+    echo $mensaje;
+    echo "</div>";
     ?>
 </body>
 

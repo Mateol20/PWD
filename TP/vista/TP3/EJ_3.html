@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nueva Película</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="container mt-4">
+        <h2>Nueva Película</h2>
+        <form
+          id="formulario"
+          class="g-3"
+          method="POST"
+          enctype="multipart/form-data"
+          action="../../control/TP3/control_EJ3.php"
+          novalidate
+        >
+          <!-- Fila para Titulo -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="titulo" class="form-label">Título</label>
+              <input
+                type="text"
+                class="form-control"
+                id="titulo"
+                name="titulo"
+                placeholder="Título"
+              />
+              <div class="invalid-feedback" id="titulo-feedback"></div>
+            </div>
+            <!-- Fila para actores -->
+            <div class="col-md-6">
+              <label for="actores" class="form-label">Actores</label>
+              <input
+                type="text"
+                class="form-control"
+                id="actores"
+                name="actores"
+                placeholder="Actores"
+              />
+              <div class="invalid-feedback" id="actores-feedback"></div>
+            </div>
+          </div>
+          <!-- Fila para director -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="director" class="form-label">Director</label>
+              <input
+                type="text"
+                class="form-control"
+                id="director"
+                name="director"
+                placeholder="Director"
+              />
+              <div class="invalid-feedback" id="director-feedback"></div>
+            </div>
+            <!-- Fila para guion -->
+            <div class="col-md-6">
+              <label for="guion" class="form-label">Guión</label>
+              <input
+                type="text"
+                class="form-control"
+                id="guion"
+                name="guion"
+                placeholder="Guión"
+              />
+              <div class="invalid-feedback" id="guion-feedback"></div>
+            </div>
+          </div>
+          <!-- Fila para produccion -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="produccion" class="form-label">Producción</label>
+              <input
+                type="text"
+                class="form-control"
+                id="produccion"
+                name="produccion"
+                placeholder="Producción"
+              />
+              <div class="invalid-feedback" id="produccion-feedback"></div>
+            </div>
+            <!-- Fila para año -->
+            <div class="col-md-6">
+              <label for="anio" class="form-label">Año</label>
+              <input
+                type="number"
+                class="form-control"
+                id="anio"
+                name="anio"
+                placeholder="Año"
+              />
+              <div class="invalid-feedback" id="anio-feedback"></div>
+            </div>
+          </div>
+          <!-- Fila para nacionalidad -->
+          <div class="row mb-3 align-items-center">
+            <div class="col-md-4">
+              <label for="nacionalidad" class="form-label">Nacionalidad</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nacionalidad"
+                name="nacionalidad"
+                placeholder="Nacionalidad"
+              />
+              <div class="invalid-feedback" id="nacionalidad-feedback"></div>
+            </div>
+          </div>
+          <!-- Fila para la duracion -->
+          <div class="row mb-3 align-items-center">
+            <div class="col-md-6">
+              <label for="duracion" class="form-label">Duración</label>
+              <input
+                type="number"
+                class="form-control"
+                id="duracion"
+                name="duracion"
+                placeholder="Duración"
+              />
+              <small class="form-text text-muted">(minutos)</small>
+              <div class="invalid-feedback" id="duracion-feedback"></div>
+            </div>
+            <!-- Radio para las restricciones de edad -->
+            <div class="col-md-6">
+              <label class="form-label">Restricciones de edad</label>
+              <div id="restriccionEdad" class="d-flex flex-wrap gap-2">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="restriccionEdad"
+                    id="todoPublico"
+                    value="Todo Público"
+                  />
+                  <label class="form-check-label" for="todoPublico"
+                    >Todo Público</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="restriccionEdad"
+                    id="mayores7"
+                    value="Mayores de 7 años"
+                  />
+                  <label class="form-check-label" for="mayores7"
+                    >Mayores de 7 años</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="restriccionEdad"
+                    id="mayores18"
+                    value="Mayores de 18 años"
+                  />
+                  <label class="form-check-label" for="mayores18"
+                    >Mayores de 18 años</label
+                  >
+                </div>
+              </div>
+              <div class="invalid-feedback" id="restriccionEdad-feedback"></div>
+            </div>
+          </div>
+          <!-- Opciones de genero de la pelicula -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="genero" class="form-label">Género</label>
+              <select class="form-select" id="genero" name="genero">
+                <option value="">Seleccione un género</option>
+                <option value="Acción">Acción</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasía">Fantasía</option>
+                <option value="Terror">Terror</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Romance">Romance</option>
+                <option value="Documental">Documental</option>
+              </select>
+              <div class="invalid-feedback" id="genero-feedback"></div>
+            </div>
+            <!-- Textarea de la sinopsis -->
+            <div class="col-md-6">
+              <label for="sinopsis" class="form-label">Sinopsis</label>
+              <textarea
+                class="form-control"
+                id="sinopsis"
+                name="sinopsis"
+                rows="3"
+              ></textarea>
+              <div class="invalid-feedback" id="sinopsis-feedback"></div>
+            </div>
+          </div>
+          <!-- Fila para subir la imagen -->
+          <div class="row mb-3">
+            <div class="col">
+              <label for="imagen" class="form-label">Subir imagen</label>
+              <input
+                type="file"
+                class="form-control"
+                id="archivo"
+                name="archivo"
+              />
+              <div class="invalid-feedback" id="imagen-feedback"></div>
+            </div>
+          </div>
+          <!-- Boton enviar y borrar -->
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn btn-secondary" id="borrar-btn">
+            Borrar
+          </button>
+        </form>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/validar_EJ3.js"></script>
+    <script src="../js/cargarFyH.js"></script>
+  </body>
+</html>

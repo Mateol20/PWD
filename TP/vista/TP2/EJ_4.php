@@ -5,6 +5,9 @@
 <head>
   <meta charset="UTF-8">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/style_header.css" />
+  <link rel="stylesheet" href="../css/style_footer.css" />
   <link rel="stylesheet" href="../css/styleEj4.css">
   <title> Ejercicio 4 </title>
 </head>
@@ -13,8 +16,9 @@
 
   <?php
   echo '
+  <main class="main-content">
     <div class="form-container">
-<form method="post" action="vista_EJ4.php">
+<form method="post" action="../../control/TP2/control_EJ4.php">
     <div class="row">
       <div class="col-md-2">
         <label>Titulo</label><br/>
@@ -100,14 +104,16 @@
         <button type="reset" class="m-1" id="botonBorrar">Borrar</button>
       </div>
     </div>
-     <a href="../../index.html">Volver al Inicio</a>
+     
     </form>
+    </main>
     </div>
 ';
 
   ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="../../control//TP2/validar_JS.js"></script>
+  <script src="../js/cargarFyH.js"></script>
 </body>
 
 </html>

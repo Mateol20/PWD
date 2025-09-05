@@ -9,6 +9,8 @@ Cambiar el método Post por Get y analizar las diferencias  -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
     <link rel="stylesheet" href="../css/style2.css">
     <title>Pagina recibe POST</title>
 </head>
@@ -23,6 +25,7 @@ Cambiar el método Post por Get y analizar las diferencias  -->
     echo "Hola, yo soy $nombre, $apellido tengo $edad años y vivo en $direccion. Estos datos se recibieron por POST";
     // echo <<<Nombre de etiqueta, para no escribir echo en cada linea, agrupamos con 1 etiqueta
     echo <<<HTML
+<main class='main-content'>
     <form action="EJ_3_POST.php" method="GET">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -33,10 +36,12 @@ Cambiar el método Post por Get y analizar las diferencias  -->
         <label for="direccion">Direccion:</label>
         <input type="text" id="direccion" name="direccion" required>
         <input type="submit" value="Enviar">
-        <a href="../../index.html">Volver al Inicio</a>
     </form>
+</main>
 HTML;
     ?>
+    <script src="../js/cargarFyH.js"></script>
+
 </body>
 
 </html>
