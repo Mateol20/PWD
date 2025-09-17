@@ -18,7 +18,7 @@
   echo '
   <main class="main-content">
     <div class="form-container">
-<form method="post" action="../../control/TP2/control_EJ4.php">
+<form method="post" action="./accion/formAccion_EJ4.php">
     <div class="row">
       <div class="col-md-2">
         <label>Titulo</label><br/>

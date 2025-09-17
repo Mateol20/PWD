@@ -12,32 +12,22 @@ Cambiar el método Post por Get y analizar las diferencias  -->
     <link rel="stylesheet" href="../css/style_header.css" />
     <link rel="stylesheet" href="../css/style_footer.css" />
     <link rel="stylesheet" href="../css/style2.css">
-    <title>EJERCICIO 3</title>
-
+    <title>Pagina recibe POST</title>
 </head>
 
 <body>
     <?php
 
-    if (isset($_GET['nombre']) && isset($_GET['apellido'])) {
-        $nombre = $_GET['nombre'];
-        $apellido = $_GET['apellido'];
-        $direccion = $_GET['direccion'];
-        $edad = $_GET['edad'];
-        echo "Hola, yo soy $nombre $apellido, tengo $edad años y vivo en $direccion. Estos datos se reciben por GET";
-    } else {
-        echo "<p>No se recibieron datos del metodo GET.</p>";
-    }
-
+    // echo <<<Nombre de etiqueta, para no escribir echo en cada linea, agrupamos con 1 etiqueta
     echo <<<HTML
-    <main class='main-content'>
-    <form action="EJ_3_GET.php" method="post">
+<main class='main-content'>
+    <form action="./accion/formAccion_EJ3.php" method="GET">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required> <br>
+        <input type="text" id="nombre" name="nombre" required>
         <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required> <br>
+        <input type="text" id="apellido" name="apellido" required>
         <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" required min="0" max="120"> <br>
+        <input type="number" id="edad" name="edad" required min="0" max="120">
         <label for="direccion">Direccion:</label>
         <input type="text" id="direccion" name="direccion" required>
         <input type="submit" value="Enviar">
@@ -46,6 +36,7 @@ Cambiar el método Post por Get y analizar las diferencias  -->
 HTML;
     ?>
     <script src="../js/cargarFyH.js"></script>
+
 </body>
 
 </html>

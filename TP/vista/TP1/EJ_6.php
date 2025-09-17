@@ -14,7 +14,7 @@
 <body>
     <?php
     echo "<main class='main-content'>";
-    echo "<form method='POST' action='../../control/TP1/control_EJ6.php'>";
+    echo "<form method='POST' action='./accion/formAccion_EJ6.php'>";
 
     echo "    <div class='form-group'>";
     echo "        <label for='nombre'>Nombre: </label>";
@@ -29,6 +29,11 @@
     echo "    <div class='form-group'>";
     echo "        <label for='edad'>Edad: </label>";
     echo "        <input type='text' name='edad' id='edad'>";
+    echo "    </div>";
+
+    echo "    <div class='form-group'>";
+    echo "        <label for='direccion'>Direccion: </label>";
+    echo "        <input type='text' name='direccion' id='direccion'>";
     echo "    </div>";
 
     echo "    <fieldset>";

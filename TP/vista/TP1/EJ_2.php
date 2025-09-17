@@ -19,7 +19,7 @@ se cursan por semana.  -->
 
     <?php
     echo "<main>";
-    echo '<form action="../../control/TP1/contador_hora_EJ2.php" method="get">';
+    echo '<form action="./accion/formAccion_EJ2.php" method="get">';
     echo '<h3>Horas cursadas por día</h3>';
     echo '<label for="lunes">Lunes:</label>';
     echo '<input type="number" id="lunes_horas" name="lunes_horas" min="0" value="0"> horas';

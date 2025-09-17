@@ -14,7 +14,7 @@
 
     <?php
     echo "<main>";
-    echo "<form method='get' action='../../control/TP1/calcular_edad_EJ4.php'>";
+    echo "<form method='get' action='./accion/formAccion_EJ4.php'>";
     echo "<label for='nombre'>Nombre </label>";
     echo "<input type=text name='nombre' id='nombre'/>";
     echo "<br/";

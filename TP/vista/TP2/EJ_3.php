@@ -27,7 +27,7 @@
         id="formulario"
         class="form g3"
         method="post"
-        action="../../control/TP2/control_EJ3.php"
+        action="./accion/formAccion_EJ3.php"
         novalidate
       >
         <div class="mb-3">

@@ -6,18 +6,21 @@
 // es estudiante o menor de 12 años el precio es de $160, si es estudiante y mayor o igual 
 // de 12 años el precio es de $180, en cualquier otro caso el precio es de $300.
 
+class Cine{
+    public function precioEntrada($datos){
+        $edad = $datos["edad"];
+        $mensaje = "";
+        $es_estudiante = obtenerDato('estudiante');
+        if ($es_estudiante === 'si' && $edad >= 12) {
+            $precio = 180;
+        } elseif ($edad < 12 || $es_estudiante === 'si') {
+            $precio = 160;
+        } else {
+            $precio = 300;
+        }
+        $mensaje = "El precio de la entrada es: $" . $precio;
+        return $mensaje;
+    }
 
-include_once '../encapsular.php';
-$mensaje = "";
-$edad = intval(obtenerDato('edad'));
-$es_estudiante = obtenerDato('estudiante');
-if ($es_estudiante === 'si' && $edad >= 12) {
-    $precio = 180;
-} elseif ($edad < 12 || $es_estudiante === 'si') {
-    $precio = 160;
-} else {
-    $precio = 300;
 }
 
-$mensaje = "El precio de la entrada es: $" . $precio;
-include '../../vista/TP1/vista_EJ8.php';

@@ -18,7 +18,7 @@ Agregar un botón para limpiar el formulario y volver a consultar -->
   <?php
   echo <<<HTML
     <form
-      action="../../control/TP1/cine_EJ8.php"
+      action="./accion/formAccion_EJ8.php"
       method="post"
     >
       <label for="edad">Edad:</label>

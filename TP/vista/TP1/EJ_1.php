@@ -15,7 +15,7 @@
   <main>
     <?php
     echo <<< HTML
-    <form action="../../control/TP1/vernumero_EJ1.php" method="get">
+    <form action="./accion/formAccion_EJ1.php" method="get">
       <label for="numero">Ingrese un numero:</label>
       <input
         type="number"

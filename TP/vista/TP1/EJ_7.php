@@ -15,7 +15,7 @@
 
     <?php
 
-    echo "<form method='post' action='../../control/TP1/calculadora_EJ7.php'>";
+    echo "<form method='post' action='./accion/formAccion_EJ7.php'>";
 
     echo "<input type='number' name='numero1' id='numero1' placeholder='Escriba un numero'>";
     echo "<br/>";

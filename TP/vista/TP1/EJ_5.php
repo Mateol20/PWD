@@ -20,7 +20,7 @@ un mensaje que indique el tipo de estudios que posee y su sexo. -->
 <body>
   <?php
   echo "<main class='main-content'>";
-  echo '<form action="../../control/TP1/control_EJ5.php" method="post">';
+  echo '<form action="./accion/formAccion_EJ5.php" method="post">';
   echo '  <h1>Formulario de Registro</h1>';
   echo '  <label for="nombre">Nombre:</label>';
   echo '  <input type="text" id="nombre" name="nombre" required /><br /><br />';
