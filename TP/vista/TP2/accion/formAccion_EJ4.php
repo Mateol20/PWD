@@ -31,7 +31,7 @@
     include_once '../../../util/encapsular.php';
     include_once '../../../control/TP2/control_EJ4.php';
     $datos = obtenerDato();
-    $obj = new Cine_TP2($datos);
+    $obj = new Cine($datos);
     $mensaje = $obj -> mensajeCine();
     ?>
 </head>

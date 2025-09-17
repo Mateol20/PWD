@@ -1,5 +1,5 @@
 <?php
-class Cine_TP2 {
+class Cine{
     private $titulo;
     private $director;
     private $actores;
@@ -10,7 +10,6 @@ class Cine_TP2 {
     private $genero;
     private $duracion;
     private $restriccionDeEdad;
-    private $mensaje;
 
     public function __construct($dato){
         $this->titulo = $dato["titulo"];

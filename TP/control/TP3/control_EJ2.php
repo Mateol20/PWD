@@ -1,18 +1,17 @@
 <?php
 class control_EJ2{
-    public $archivo;
     public $tipo_mime;
     public $ruta_temporal;
 
-    public function archivoTxt(){
+    public function archivoTxt($dato){
         $contenido='';
-        if (isset($_FILES['archivo'])) {
-            $this->archivo = $_FILES['archivo'];
-            $this->tipo_mime = $this->archivo['type'];
+        $archivo = $dato["archivo"];
+        if (isset($archivo)) {
+            $this->tipo_mime = $archivo['type'];
             if (
                 $this->tipo_mime === "text/plain"
                 ) {
-                    $this->ruta_temporal = $this->archivo['tmp_name'];
+                    $this->ruta_temporal = $archivo['tmp_name'];
                     $contenido = file_get_contents($this->ruta_temporal);
                     $contenido = htmlspecialchars($contenido);
                 } else {
