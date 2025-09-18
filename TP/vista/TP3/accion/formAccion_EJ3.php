@@ -10,7 +10,7 @@
     include_once '../../../control/TP3/control_EJ3.php';
     $datos = obtenerDato();
     $obj = new control_Ej3($datos);
-    $mensaje = $obj -> cineImagen();
+    $mensaje = $obj->mostrarCineConImagen();
     ?>
 </head>
 
@@ -21,7 +21,7 @@
         echo $mensaje;
         ?>
         <br>
-        <a href='../../vista/TP3/EJ_3.html'>Volver al formulario</a>
+        <a href='../../vista/TP3/EJ_3.php'>Volver al formulario</a>
     </div>
 </body>
 

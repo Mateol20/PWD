@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/style_header.css" />
   <link rel="stylesheet" href="../css/style_footer.css" />
   <link rel="stylesheet" href="../css/styleEj4.css">
-  <title> Ejercicio 4 </title>
+  <title> Ejercicio 3 </title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
   echo '
   <main class="main-content">
     <div class="form-container">
-<form method="post" action="./accion/formAccion_EJ4.php">
+<form method="post" action="./accion/formAccion_EJ3.php" enctype="multipart/form-data">
     <div class="row">
       <div class="col-md-2">
         <label>Titulo</label><br/>
