@@ -14,8 +14,12 @@ function loadComponent(filePath, targetSelector, position) {
     .catch((error) => console.error("Error al cargar el componente:", error));
 }
 
-// Cargar el header dentro del body, al principio
+// Cargar header
 loadComponent("../estructura/header.html", "body", "afterbegin");
+document.head.innerHTML +=
+  '<link rel="stylesheet" href="../css/style_header.css">';
 
-// Cargar el footer dentro del body, al final
+// Cargar footer
 loadComponent("../estructura/footer.html", "body", "beforeend");
+document.head.innerHTML +=
+  '<link rel="stylesheet" href="../css/style_footer.css">';
