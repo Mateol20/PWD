@@ -165,8 +165,6 @@ class Auto
         $arregloAutos = array();
         $base = new BaseDatos();
         $sql = "SELECT * FROM auto";
-
-        // Si se proporciona un parámetro, lo agregamos a la consulta
         if ($parametro != "") {
             $sql .= ' WHERE ' . $parametro;
         }
@@ -200,17 +198,19 @@ class Auto
         if ($respuesta > 0) {
             while ($row = $base->Registro()) {
                 $obj = new Auto();
+                // setDato para el auto usa el DNI
                 $obj->setDato($row['Patente'], $row['Marca'], $row['Modelo'], $row['NroDni']);
-
-                // Crear el dueño
-                $duenio = new Persona(
-                    $row['NroDni'],
+                $duenio = new Persona();
+                // Usamos el método setearDatos() de la clase Persona
+                $duenio->setearDatos(
+                    $row['NroDni'], // DNI
                     $row['Apellido'],
                     $row['Nombre'],
                     "",
                     "",
-                    "" // si no necesitás otros campos
+                    ""
                 );
+
                 $obj->setObjDuenio($duenio);
 
                 array_push($arregloAutos, $obj);
@@ -227,8 +227,6 @@ class Auto
         $bd = new BaseDatos();
         $exito = false;
         $patente = $this->getPatente();
-
-        // Verifica si la patente no está vacía
         if ($patente != '') {
             $sql = "SELECT * FROM auto WHERE Patente = '" . $patente . "'";
 

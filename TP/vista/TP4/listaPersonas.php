@@ -40,7 +40,7 @@ $listaPersonas = $controladorPersona->listarPersonas();
     <?php else: ?>
         <p>No se encontraron personas cargadas en la base de datos.</p>
     <?php endif; ?>
-
+    <script src="../js//cargarFyH.js"></script>
 </body>
 
 </html>

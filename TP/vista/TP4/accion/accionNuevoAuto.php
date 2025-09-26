@@ -11,12 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $datos = data_submitted();
     $dniDuenio = $datos['dniDuenio'];
-
-    // Paso 1: Verificar si el dueño ya existe en la base de datos
     $personaExistente = $controladorPersona->buscarPersonaPorDni($dniDuenio);
-
     if ($personaExistente) {
-        // Paso 2: Si el dueño existe, intentamos cargar el auto
         if ($controladorAuto->crearAuto($datos)) {
             $mensaje = "¡El auto ha sido registrado con éxito!";
             $exito = true;
@@ -24,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mensaje = "Error: No se pudo registrar el auto.";
         }
     } else {
-        // Paso 3: Si el dueño no existe, mostramos un error y un enlace para crearlo
+        // Si el dueño no existe, mostramos un error y un enlace para crearlo
         $mensaje = "Error: La persona con DNI " . htmlspecialchars($dniDuenio) . " no se encuentra registrada.";
-        $link_nueva_persona = "<a href='NuevaPersona.php' class='btn btn-warning mt-3'>Registrar Nueva Persona</a>";
+        $link_nueva_persona = "<a href='../NuevaPersona.php' class='btn btn-warning mt-3'>Registrar Nueva Persona</a>";
     }
 }
 ?>

@@ -4,17 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Auto</title>
+    <title>Registrar Nuevo Auto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 55px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <div id="mensajeError" class="alert alert-danger mx-auto mt-3" role="alert" style="display:none; max-width: 500px;">
+    </div>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header text-center">
+                    <div class="card-header text-center bg-primary text-white">
                         <h1>Registrar Nuevo Auto</h1>
                     </div>
                     <div class="card-body">
@@ -49,48 +57,9 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(function() {
-            $("#formulario").submit(function(event) {
-                event.preventDefault();
-
-                let patente = $("#patente").val();
-                let marca = $("#marca").val();
-                let modelo = $("#modelo").val();
-                let dniDuenio = $("#dniDuenio").val();
-
-                $(".is-invalid").removeClass("is-invalid");
-                $(".invalid-feedback").text("");
-
-                let error = false;
-
-                if (patente.trim() === "") {
-                    $("#patente").addClass("is-invalid");
-                    $("#patente-feedback").text("La patente es obligatoria.");
-                    error = true;
-                }
-                if (marca.trim() === "") {
-                    $("#marca").addClass("is-invalid");
-                    $("#marca-feedback").text("La marca es obligatoria.");
-                    error = true;
-                }
-                if (modelo.trim() === "") {
-                    $("#modelo").addClass("is-invalid");
-                    $("#modelo-feedback").text("El modelo es obligatorio.");
-                    error = true;
-                }
-                if (dniDuenio.trim() === "") {
-                    $("#dniDuenio").addClass("is-invalid");
-                    $("#dni-duenio-feedback").text("El DNI del dueño es obligatorio.");
-                    error = true;
-                }
-
-                if (!error) {
-                    this.submit();
-                }
-            });
-        });
-    </script>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/nuevoAuto.js"></script>
+    <script src="..//js/cargarFyH.js"></script>
 
 </body>
 

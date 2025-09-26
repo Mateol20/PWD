@@ -89,7 +89,7 @@ if (isset($_GET['dni'])) {
 
         <p style="text-align: center; margin-top: 20px;"><a href="../listaPersonas.php">Volver al listado de personas</a></p>
     </div>
-
+    <script src="../../js/cargarFyH.js"></script>
 </body>
 
 </html>

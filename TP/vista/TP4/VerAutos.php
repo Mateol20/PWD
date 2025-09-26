@@ -3,24 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style_tp4.css" />
     <title>Ver Autos</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
 
 <body>
@@ -29,8 +13,7 @@
 
     <?php
     // Incluimos el controlador para obtener la lista de autos.
-    require_once '../../configuracion.php';
-    require_once '../../control/TP4/controlAuto.php';
+    include_once '../../configuracion.php';
     $controlador = new ControladorAuto();
     $listaAutos = $controlador->listarAutoDuenio();
 
@@ -56,7 +39,7 @@
     }
 
     ?>
-
+    <script src="../js//cargarFyH.js"></script>
 </body>
 
 </html>

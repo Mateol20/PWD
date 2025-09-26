@@ -29,10 +29,6 @@ header {
   align-items: center;
   gap: 16px;
 }
-main,
-.tp-container {
-  margin-top: 50px;
-}
 
 .btn-inicio {
   display: inline-flex;
