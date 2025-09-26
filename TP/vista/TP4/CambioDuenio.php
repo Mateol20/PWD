@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Dueño de Auto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 55px;
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 
 <body>
 
+    <div id="mensajeError" class="alert alert-danger mx-auto mt-3" role="alert" style="display:none; max-width: 500px;">
+    </div>
+
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header text-center">
+                <div class="card shadow-lg">
+                    <div class="card-header text-center bg-primary text-white">
                         <h1>Cambiar Dueño de Auto</h1>
                     </div>
                     <div class="card-body">
@@ -39,36 +49,11 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(function() {
-            $("#formulario").submit(function(event) {
-                event.preventDefault();
 
-                let patente = $("#patente").val();
-                let dniDuenio = $("#dniDuenio").val();
+    <script src="../js//cargarFyH.js"></script>
 
-                $(".is-invalid").removeClass("is-invalid");
-                $(".invalid-feedback").text("");
-
-                let error = false;
-
-                if (patente.trim() === "") {
-                    $("#patente").addClass("is-invalid");
-                    $("#patente-feedback").text("El número de patente es obligatorio.");
-                    error = true;
-                }
-                if (dniDuenio.trim() === "") {
-                    $("#dniDuenio").addClass("is-invalid");
-                    $("#dni-duenio-feedback").text("El DNI del nuevo dueño es obligatorio.");
-                    error = true;
-                }
-
-                if (!error) {
-                    this.submit();
-                }
-            });
-        });
-    </script>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/cambiarDuenio.js"></script>
 
 </body>
 

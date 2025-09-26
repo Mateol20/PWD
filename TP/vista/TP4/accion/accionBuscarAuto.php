@@ -7,14 +7,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['patente'])) {
     $patente = $_POST['patente'];
     $controlador = new ControladorAuto();
 
-    // Llamamos al nuevo método del controlador
+
     $autoEncontrado = $controlador->buscarAutoPorPatente($patente);
 
     if (!$autoEncontrado) {
         $mensaje = "No se encontró ningún auto con la patente: " . $patente;
     }
 } else {
-    // Si no se envió el formulario correctamente
+
     $mensaje = "Error: La solicitud no es válida.";
 }
 ?>

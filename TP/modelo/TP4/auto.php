@@ -7,7 +7,7 @@ class Auto
     private $dniDuenio;
     private $mensajeError;
     private $objDuenio;
-    private $nombreDuenio; // <-- Agrega esta línea
+    private $nombreDuenio;
     private $apellidoDuenio;
 
     public function __construct()
@@ -70,7 +70,6 @@ class Auto
     {
         $this->objDuenio = $duenio;
     }
-    // Metodos Get
     public function getNombreDuenio()
     {
         return $this->nombreDuenio;
@@ -80,7 +79,6 @@ class Auto
         return $this->apellidoDuenio;
     }
 
-    // Metodos Set
     public function setNombreDuenio($nombre)
     {
         $this->nombreDuenio = $nombre;
@@ -201,9 +199,8 @@ class Auto
                 // setDato para el auto usa el DNI
                 $obj->setDato($row['Patente'], $row['Marca'], $row['Modelo'], $row['NroDni']);
                 $duenio = new Persona();
-                // Usamos el método setearDatos() de la clase Persona
                 $duenio->setearDatos(
-                    $row['NroDni'], // DNI
+                    $row['NroDni'],
                     $row['Apellido'],
                     $row['Nombre'],
                     "",
@@ -235,7 +232,6 @@ class Auto
                 if ($res > -1) {
                     if ($res > 0) {
                         $fila = $bd->Registro();
-                        // Setear los datos del auto si se encuentra
                         $this->setDato($fila['Patente'], $fila['Marca'], $fila['Modelo'], $fila['DniDuenio']);
                         $exito = true;
                     }

@@ -33,8 +33,6 @@ class ControladorPersona
     {
         $objPersona = new Persona();
         $exito = false;
-
-        // Verifica que los datos necesarios existan
         if (isset($datos['nroDni'], $datos['apellido'], $datos['nombre'])) {
             $objPersona->setearDatos(
                 $datos['nroDni'],
@@ -44,8 +42,6 @@ class ControladorPersona
                 $datos['telefono'] ?? null,
                 $datos['domicilio'] ?? null
             );
-
-            // Llama al método insertar del modelo
             if ($objPersona->insertar()) {
                 $exito = true;
             }
@@ -61,15 +57,10 @@ class ControladorPersona
     {
         $exito = false;
         $objPersona = new Persona();
-
-        // 1. Setear el DNI en el objeto Persona para que pueda ser cargado
         if (isset($datos['nroDni'])) {
             $objPersona->setNroDni($datos['nroDni']);
         }
-
-        // 2. Cargar el objeto desde la base de datos
         if ($objPersona->cargar()) {
-            // 3. Si la persona existe, setear los nuevos datos
             $objPersona->setearDatos(
                 $datos['nroDni'],
                 $datos['apellido'],
@@ -78,8 +69,6 @@ class ControladorPersona
                 $datos['telefono'] ?? null,
                 $datos['domicilio'] ?? null
             );
-
-            // 4. Ahora sí, llamar al método modificar()
             if ($objPersona->modificar()) {
                 $exito = true;
             }

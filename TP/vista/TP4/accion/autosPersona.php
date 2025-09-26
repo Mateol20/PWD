@@ -8,12 +8,9 @@ if (isset($_GET['dni'])) {
     $dni = $_GET['dni'];
     $controladorPersona = new ControladorPersona();
     $controladorAuto = new ControladorAuto();
-
-    // 1. Buscamos a la persona por su DNI
     $persona = $controladorPersona->buscarPersonaPorDni($dni);
 
     if ($persona) {
-        // 2. Si la persona existe, buscamos sus autos
         $listaAutos = $controladorAuto->listarAutos("DniDuenio = '" . $dni . "'");
     } else {
         $mensaje = "No se encontró ninguna persona con el DNI: " . $dni;

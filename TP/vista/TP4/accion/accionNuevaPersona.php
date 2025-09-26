@@ -6,8 +6,6 @@ $exito = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $controladorPersona = new ControladorPersona();
-
-    // El método data_submitted() de tu archivo funciones.php ya limpia los datos
     $datos = data_submitted();
 
     if ($controladorPersona->crearPersona($datos)) {

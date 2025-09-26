@@ -1,3 +1,5 @@
+// ARCHIVO: js/cargarFyH.js (CORREGIDO)
+
 function loadComponent(filePath, targetSelector, position) {
   fetch(filePath)
     .then((response) => response.text())
@@ -14,12 +16,19 @@ function loadComponent(filePath, targetSelector, position) {
     .catch((error) => console.error("Error al cargar el componente:", error));
 }
 
+function loadCSS(filePath) {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = filePath;
+  document.head.appendChild(link);
+}
+
 // Cargar header
 loadComponent("../estructura/header.html", "body", "afterbegin");
-document.head.innerHTML +=
-  '<link rel="stylesheet" href="../css/style_header.css">';
+
+loadCSS("../css/style_header.css");
 
 // Cargar footer
 loadComponent("../estructura/footer.html", "body", "beforeend");
-document.head.innerHTML +=
-  '<link rel="stylesheet" href="../css/style_footer.css">';
+
+loadCSS("../css/style_footer.css");

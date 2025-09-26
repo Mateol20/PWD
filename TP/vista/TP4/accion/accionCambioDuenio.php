@@ -13,20 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $patente = $datos['patente'];
     $dniDuenio = $datos['dniDuenio'];
 
-    // 1. Verificamos si la persona (el nuevo dueño) existe
     $personaExistente = $controladorPersona->buscarPersonaPorDni($dniDuenio);
 
     if (!$personaExistente) {
         $mensaje = "Error: La persona con DNI " . htmlspecialchars($dniDuenio) . " no se encuentra registrada.";
         $link_nueva_persona = "<a href='NuevaPersona.php' class='btn btn-warning mt-3'>Registrar Nueva Persona</a>";
     } else {
-        // 2. Verificamos si el auto con la patente existe
+
         $autoExistente = $controladorAuto->buscarAutoPorPatente($patente);
 
         if (!$autoExistente) {
             $mensaje = "Error: El auto con patente " . htmlspecialchars($patente) . " no se encuentra registrado.";
         } else {
-            // 3. Si ambos existen, intentamos cambiar el dueño
+
             if ($controladorAuto->cambiarDuenio($datos)) {
                 $mensaje = "¡El dueño del auto ha sido cambiado con éxito!";
                 $exito = true;
@@ -61,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo htmlspecialchars($mensaje); ?>
                         </p>
                         <?php echo $link_nueva_persona; ?>
-                        <a href="CambioDuenio.php" class="btn btn-primary mt-3">Volver al formulario</a>
+                        <a href="../CambioDuenio.php" class="btn btn-primary mt-3">Volver al formulario</a>
                     </div>
                 </div>
             </div>

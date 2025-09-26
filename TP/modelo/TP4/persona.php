@@ -7,7 +7,7 @@ class Persona
     private $fechaNac;
     private $telefono;
     private $domicilio;
-    private $mensajeError; // Propiedad para el error
+    private $mensajeError;
 
     // Constructor
     public function __construct()
@@ -186,9 +186,7 @@ class Persona
             $res = $base->Ejecutar($sql);
             if ($res > -1) {
                 if ($res > 0) {
-                    // Obtiene el registro
                     $row = $base->Registro();
-                    // Setea los datos en el objeto 
                     $this->setearDatos(
                         $row['NroDni'],
                         $row['Apellido'],

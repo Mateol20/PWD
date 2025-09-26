@@ -78,13 +78,15 @@ function validarFormatoDNI(selector) {
  */
 function validarSoloLetras(selector, nombreCampo) {
   var texto = $(selector).val().trim();
+  limpiarErrorCampo(selector);
 
-  // Regex: ^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$ -> Letras, vocales con tilde y espacios.
   var regexLetras = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
   if (!regexLetras.test(texto)) {
-    mostrarError("El campo " + nombreCampo + " solo debe contener letras.");
-    $(selector).focus();
+    mostrarErrorCampo(
+      selector,
+      "El campo " + nombreCampo + " solo debe contener letras."
+    );
     return false;
   }
   return true;

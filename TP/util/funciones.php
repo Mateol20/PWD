@@ -26,10 +26,8 @@ function verEstructura($e)
 function autoloader($class_name)
 {
     $directorys = array(
-        // Agrega la ruta correcta para la carpeta modelo (sin TP4)
         $_SESSION['ROOT'] . 'modelo/',
         $_SESSION['ROOT'] . 'vista/TP4/',
-        // Agrega la ruta correcta para la carpeta de control (sin TP4)
         $_SESSION['ROOT'] . 'control/',
         $_SESSION['ROOT'] . 'modelo/TP4/',
         $_SESSION['ROOT'] . 'modelo/conector/',

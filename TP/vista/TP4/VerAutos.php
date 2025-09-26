@@ -12,7 +12,6 @@
     <h1>Listado de Autos</h1>
 
     <?php
-    // Incluimos el controlador para obtener la lista de autos.
     include_once '../../configuracion.php';
     $controlador = new ControladorAuto();
     $listaAutos = $controlador->listarAutoDuenio();
