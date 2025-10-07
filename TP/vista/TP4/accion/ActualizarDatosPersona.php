@@ -3,10 +3,10 @@ require_once '../../../configuracion.php';
 
 $mensaje = "";
 $exito = false;
+$datos = data_submitted();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($datos)) {
     $controladorPersona = new ControladorPersona();
-    $datos = data_submitted();
 
     if ($controladorPersona->actualizarPersona($datos)) {
         $mensaje = "¡Los datos de la persona han sido actualizados con éxito!";

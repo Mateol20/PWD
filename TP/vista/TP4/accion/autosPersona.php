@@ -4,8 +4,9 @@ require_once '../../../configuracion.php';
 $persona = null;
 $listaAutos = [];
 $mensaje = "";
-if (isset($_GET['dni'])) {
-    $dni = $_GET['dni'];
+$datos = data_submitted();
+if (isset($datos)) {
+    $dni = $datos['dni'];
     $controladorPersona = new ControladorPersona();
     $controladorAuto = new ControladorAuto();
     $persona = $controladorPersona->buscarPersonaPorDni($dni);

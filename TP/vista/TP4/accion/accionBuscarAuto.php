@@ -1,10 +1,10 @@
 <?php
 require_once '../../../configuracion.php';
-require_once '../../../control/TP4/controlAuto.php';
+$encapsular = data_submitted();
 $autoEncontrado = null;
 $mensaje = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['patente'])) {
-    $patente = $_POST['patente'];
+if (isset($encapsular)) {
+    $patente = $encapsular['patente'];
     $controlador = new ControladorAuto();
 
 
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['patente'])) {
             <a href="../buscarAuto.php">Volver al buscador</a>
         </p>
     </div>
-
+ <script src="../../js//cargarFyH.js" defer></script>
 </body>
 
 </html>

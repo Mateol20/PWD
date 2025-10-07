@@ -2,9 +2,9 @@
 require_once '../../../configuracion.php';
 $persona = null;
 $mensaje = "";
-
-if (isset($_GET['nroDni'])) {
-    $nroDni = $_GET['nroDni'];
+$encapsular = data_submitted();
+if (isset($encapsular)) {
+    $nroDni = $encapsular['nroDni'];
     $controladorPersona = new ControladorPersona();
     $persona = $controladorPersona->buscarPersonaPorDni($nroDni);
 

@@ -3,10 +3,10 @@ require_once '../../../configuracion.php';
 
 $mensaje = "";
 $exito = false;
+$datos = data_submitted();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($datos)) {
     $controladorPersona = new ControladorPersona();
-    $datos = data_submitted();
 
     if ($controladorPersona->crearPersona($datos)) {
         $mensaje = "¡La persona ha sido registrada con éxito!";

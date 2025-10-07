@@ -1,6 +1,7 @@
 <?php
 function data_submitted()
 {
+
     $_AAux = array();
     if (!empty($_POST))
         $_AAux = $_POST;

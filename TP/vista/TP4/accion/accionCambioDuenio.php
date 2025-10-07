@@ -4,12 +4,12 @@ require_once '../../../configuracion.php';
 $mensaje = "";
 $exito = false;
 $link_nueva_persona = "";
+$datos = data_submitted();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($datos)) {
     $controladorAuto = new ControladorAuto();
     $controladorPersona = new ControladorPersona();
 
-    $datos = data_submitted();
     $patente = $datos['patente'];
     $dniDuenio = $datos['dniDuenio'];
 
